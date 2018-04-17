@@ -1,22 +1,21 @@
-//index.js
-//landing houses app
-
 import React from 'react'
-import { render }  from 'react-dom'
-import { createStore } from 'redux'
+import { render } from 'react-dom'
+import Presentation from './containers/Presentation'
 import { Provider } from 'react-redux'
-import rootReducer from './reducers/index.js'
-import App from './components/App.js'
+import { createStore } from 'redux'
+import slidenav from './reducers/rootReducer'
 
-//styling
-//CSS here
 
 const store = createStore(rootReducer)
 
-render(
-	<Provider store={store}>
-		<App /> 
-	</Provider>, 
-	document.getElementById("root")
-)
+const App = () => (
+	<div>
+		<Provider store={store}>
+			<Presentation />
+		</Provider>
+	</div>
+);
+
+render(<App />, document.getElementById('root'))
+
 
