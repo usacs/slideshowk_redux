@@ -1,32 +1,25 @@
 import axios from 'axios'
+import { GET_IMAGE } from '../actions/ActionTypes'
 
+const APIEndpoint = 'https://api.pexels.com/v1';
 
 const ImageSourcing = {
 
 	findCreativeImg(query) {
-		const APIEndpoint = 'https://api.pexels.com/v1';
-
-		var axiosPromise = axios({
-			type: 'GET'
-			url: APIEndpoint + '/search', 
-			params: {
-				query: query, 
-				per_page: 25, 
-				page: 1
-			}, 
-			headers: {
-				Authorization: process.env.API_KEY;
-			},
-			responseType: 'json'
-		})
-		.then(function(response) {
-			return response.data;
-		}).
-		catch(function(err) {
-			console.log(err);
-		});
-		return axiosPromise;
+		return function(dispatch) {
+			axios.get('${APIEndpoint}/search/?query=`${query}&per_page=20&page=1', {headers: {Authorization: process.env.PEXELSKEY}})
+			.then(response => {
+				dispatch({
+					type: GET_IMAGE,
+					payload: response.data.data.photos[1].src.landscape
+				})
+			})
+			.catch((error) => {
+				console.log(error)
+			})
+		}
+	
 	}
-};
+}
 
 export default ImageSourcing	

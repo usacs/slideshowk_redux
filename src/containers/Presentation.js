@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
-
+import { NEXT_SLIDE, PREV_SLIDE } from '../actions/ActionTypes'
+import { getImage } from '../actions/ImageSource'
 
 class Presentation extends React.Component {
 	
@@ -25,31 +26,36 @@ class Presentation extends React.Component {
 			e.preventDefault()
 			this.prevSlide()
 		}
+
+		if(e.key === 'ArrowUp') {
+			e.preventDefault()
+			this.props.getImage()
+		}
 	}
 
 
 	nextSlide = () => {
-		this.props.dispatch({type: 'INCREMENT'});	
+		//this.props.dispatch({type: NEXT_SLIDE});	
 	}
 
 	prevSlide = () => {
-		this.props.dispatch({type: 'DECREMENT'});	
+		//this.props.dispatch({type: PREV_SLIDE});
 	}
 
 	render() {
 		return (
 			<div>
-				<span>{this.props.count}</span>
+				<span>{this.props.slidenav.index}</span>
 			</div>
 		)
 	}
 }
 
-
 function mapStateToProps(state) {
 	return {
-		count: state.count
+		slidenav: state.slidenav,
+		imageurl: state.slidemaker.imageurl
 	};
 }
 
-export default connect(mapStateToProps) (Presentation)
+export default connect(mapStateToProps, { getImage }) (Presentation)

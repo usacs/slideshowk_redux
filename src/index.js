@@ -2,11 +2,19 @@ import React from 'react'
 import { render } from 'react-dom'
 import Presentation from './containers/Presentation'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import slidenav from './reducers/rootReducer'
+import reduxThunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
+import rootReducer from './reducers/rootReducer'
+
+ 
 
 
-const store = createStore(rootReducer)
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(rootReducer)
+
+store.subscribe(() => {
+  console.log(store.getState())
+})
 
 const App = () => (
 	<div>
