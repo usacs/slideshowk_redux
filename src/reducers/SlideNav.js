@@ -1,7 +1,9 @@
 //SlideNav.js
-import { NEXT_SLIDE, PREV_SLIDE, SET_MAX_COUNT } from '../actions/ActionTypes'	
+import { NEXT_SLIDE, PREV_SLIDE, SET_START_QUERY, SET_MAX_COUNT } from '../actions/ActionTypes'	
 
 const initialState = {	
+	slides: null,
+	start_query: ''
 	index: 0,			
 	max: 10
 }
@@ -36,7 +38,12 @@ const SlideNav = (state = initialState, action) => {
 		case SET_MAX_COUNT:
 			return {
 				...state, 
-				max: action.payload.max
+				max: action.max
+			}
+		case SET_START_QUERY
+			return {
+				...state,
+				start_query: action.query
 			}
 		default:
 			return state

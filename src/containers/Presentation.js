@@ -36,14 +36,15 @@ class Presentation extends React.Component {
 	}
 
 	render() {
-		console.log(this.props)
+		//console.log(this.props)
 		return (
-			<div>
-				<Slide 
-					imageurl = {this.props.slidemaker.imageurl}
-					text = {this.props.slidemaker.text}
-					author = {this.props.slidemaker.author}
-				/>
+			<div>	
+					<Slide 
+						index = {this.props.index}
+						imageurl = {this.props.slidemaker.imageurl}
+						text = {this.props.slidemaker.text}
+						author = {this.props.slidemaker.author}
+					/>
 			</div>
 		)
 	}

@@ -1,4 +1,5 @@
-import { NEXT_SLIDE, PREV_SLIDE } from '../actions/ActionTypes'
+//SlideActions.js
+import { NEXT_SLIDE, PREV_SLIDE, SET_START_QUERY, SET_MAX_COUNT, MAKE_SLIDES } from '../actions/ActionTypes'
 
 
 export const nextSlide = () => {
@@ -13,3 +14,16 @@ export const prevSlide = () => {
 	})
 }
 
+export const setMaxCount = (num) => {
+	return (dispatch) => dispatch({
+		type: SET_MAX_COUNT,
+		max: num
+	})
+}
+
+export const setQuery = (query) => {
+	return (dispatch) => dispatch({
+		type: SET_START_QUERY,
+		query: query
+	})
+}
