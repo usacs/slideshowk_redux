@@ -7,11 +7,6 @@ class Slide extends React.Component
     constructor(props)
     {
         super(props);
-        this.state =
-        {	
-			img: props.img,
-            txt: props.txt,
-        };
 
     }
 	
@@ -20,9 +15,12 @@ class Slide extends React.Component
     {
 		
         return(
-				<div className = "SlideContainer fade">
-					<img src = {this.props.image} alt = "image goes here"/>
-					<text>{this.props.text}</text>
+				<div>
+					<div className = "SlideContainer fade">
+						<img src = {this.props.imageurl} alt = "image goes here"/>
+						<text>{this.props.text}</text>
+					</div>
+					<text>{this.props.author}</text>
 				</div>
               );
     }

@@ -1,3 +1,4 @@
+//SlideNav.js
 import { NEXT_SLIDE, PREV_SLIDE, SET_MAX_COUNT } from '../actions/ActionTypes'	
 
 const initialState = {	

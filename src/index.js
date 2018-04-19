@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Presentation from './containers/Presentation'
+import Main from './components/Main'
 import { Provider } from 'react-redux'
 import reduxThunk from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
@@ -19,10 +19,10 @@ store.subscribe(() => {
 const App = () => (
 	<div>
 		<Provider store={store}>
-			<Presentation />
+			<Main />
 		</Provider>
 	</div>
-);
+)
 
 render(<App />, document.getElementById('root'))
 
