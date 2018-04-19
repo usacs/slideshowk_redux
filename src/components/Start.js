@@ -1,72 +1,38 @@
 //Start.js
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { setMaxCount, setQuery, confirmSetup } from '../actions/SlideActions'
-import Setup from '../components/Setup.jsx'
-import Presentation from "./Presentation.jsx"
+import Setup from '../containers/Setup'
+import Presentation from '../containers/Presentation'
 
-class Start extends Component
-{
-	componentDidMount() {
-	}
+class Start extends React.Component {
 
 	
-	constructor(props)
-	{
-		super(props);
-		this.state = 
-		{
-			isSetup: false,
-			startquery: '',
-			slidecount: 10,
-			slides: []
-		};
-		this.onSetup = this.onSetup.bind(this);
-	}
-
-	onSetup = (data) =>
-	{
-		this.setState({
-						isSetup: true,
-						startquery: data.startquery,
-						slidecount: data.slidecount,
-						slides: data.slides
-					  });
-	}
-
-	componentDidUpdate()
-	{
-		//console.log(this.state);
-	}
-
-	render()
-	{
-		const {isSetup, slides, ...others} = this.state;
-		
-		
+	render() {
+		//console.log('rendering Start')
+		const {ready, ...others} = this.props.slidenav
+	
 		let content = null;
-		if(isSetup)
-		{
-			content = <Presentation slides = {slides} {...others}/>;
-		}
-		else
-		{
-			content = <Setup 
-					onSetup = {this.onSetup}
-					isSetup = {isSetup}
-					slides = {slides}
-					{...others} />;
+	
+		if(ready === true) {
+			content = <Presentation />
+		} else {
+			content = <Setup />
 		}
 
 		return(
 			<div>
-				{content}
+				{ content }
 			</div>
-		);
+		)
 	}
 
 }
 
+function mapStateToProps(state) {
+	return {
+		slidenav: state.slidenav
+	}
+}
 
-export default Start
+
+export default connect(mapStateToProps, null) (Start)

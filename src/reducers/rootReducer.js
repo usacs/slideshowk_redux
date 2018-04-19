@@ -4,7 +4,7 @@ import SlideMaker from './SlideMaker'
 
 const rootReducer = combineReducers({
 	slidenav: SlideNav,
-	slidemaker: SlideMaker,
+	slidemaker: SlideMaker
 
 })
 

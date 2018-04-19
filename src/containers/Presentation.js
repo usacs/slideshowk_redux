@@ -11,7 +11,7 @@ class Presentation extends React.Component {
 	
 
 	componentDidMount() {
-		this.props.getSlides()
+	//	this.props.getSlides()
 		this.handleKeyDown = this.handleKeyDown.bind(this)
 		window.addEventListener("keydown", this.handleKeyDown)
 	}
@@ -40,7 +40,7 @@ class Presentation extends React.Component {
 		return (
 			<div>	
 					<Slide 
-						index = {this.props.index}
+						index = {this.props.slidenav.index}
 						imageurl = {this.props.slidemaker.imageurl}
 						text = {this.props.slidemaker.text}
 						author = {this.props.slidemaker.author}
