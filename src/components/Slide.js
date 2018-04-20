@@ -16,7 +16,9 @@ class Slide extends React.Component
 				<div>
 					<div className = "SlideContainer fade">
 						<img src = {this.props.image} alt = "image goes here"/>
-						{this.props.text}					
+						<div className = "SlideText">
+							{this.props.text}			
+						</div>
 					</div>
 					{this.props.author}
 				</div>

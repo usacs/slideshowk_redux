@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import rootReducer from './reducers/rootReducer'
 import HowToPlay from './components/HowToPlay'
 import Start from './components/Start'
+require('./styles/styles.css')
+
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(reduxThunk)))
