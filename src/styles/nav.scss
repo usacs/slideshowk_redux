@@ -99,6 +99,7 @@ $md_font: 'Roboto Condensed', sans-serif;
 	box-shadow: #000 5px 10px 20px -3px;
 	
 	font-family: $md_font;
+	text-align: center;
 
 	
 	>h2 
@@ -121,26 +122,43 @@ $md_font: 'Roboto Condensed', sans-serif;
 
 	input 
 	{
-		width: 340px; 
+		width: 440px; 
 		height: 50px; 
 		padding: 5px 20px 0px 20px; 
 		margin: 0 0 20px 0;
-		background: $background_color;
-		background: -moz-linear-gradient(top, $background_color 0%, $background_dark 20%); /* firefox */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$background_color), color-stop(20%,$background_color)); /* webkit */
 		border-radius: 15px; 
 		-moz-border-radius: 15px; 
-		-webkit-border-radius: 15px;
-		font-family: sans-serif; font-size: 16px; color: #f2f2f2; text-transform: uppercase; text-shadow: 0px -1px 0px #334f71;
+		-webkit-border-radius: 15px; 
+
+	
+		background: $background_color;
+		box-shadow: #000 5px 10px 10px -7px inset;
+		
+		font-family: $md_font;
+		font-size: 30px; 
+		color: $background_light; 
+		text-transform: capitalize; 
+		text-shadow: 0px -1px 0px black;
 	}
 	input::-webkit-input-placeholder  
 	{
-    	color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;
+    	color: $background_light; 
+		text-shadow: 0px -1px 0px black;
 	}
 	input:-moz-placeholder 
 	{
-	    color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;
+	    color: $background_light; 
+		text-shadow: 0px -1px 0px black;
 	}
+
+	input:focus 
+	{
+		color: $ghostwhite;
+		outline: none;
+		background: $background_dark;
+	}
+
+
 }
 
 ul.header
@@ -171,63 +189,3 @@ ul.header
 
 }
 
-
-.dropdown
-{
-	//positioning
-	position: absolute;
-	top: 50%;
-	left: 65%;
-	transform: translate(0%, -50%);
-	
-
-	select
-	{
-
-		//sizing
-		position: relative;
-		display: block;
-		width: 30em;
-		height: 4em;
-
-	
-		//margins
-		margin: 0;
-		padding: 0 0 0 .5em;
-		//bordering
-		border-radius: .25em;
-		outline: 0;
-		box-shadow: none;
-		//coloring
-		background: $dimgray;
-		color: $ghostwhite;
-		//text
-		overflow: hidden;
-		//cursor
-		cursor: pointer;
-	
-		::ms-expand
-		{
-			display: none;
-		}
-
-		::after
-		{
-			content: '\25BC';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			padding: 0 1em;
-			transition: .25s all ease;
-
-		}
-		
-		:hover::after
-		{
-			color: $background_color;
-		}
-
-	}
-
-}

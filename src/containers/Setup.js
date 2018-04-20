@@ -44,7 +44,7 @@ class Setup extends React.Component
 					<div className = "text">
 						<input type = "text" name="query" placeholder="Enter a &quot;Topic&quot;" onChange={this.onTextChange}/>
 					</div>
-					<div className = "dropdown">
+					<div className = "selection">
 						<select name = "slidecount" onChange={this.onNumChange}>
 							<option value="10">10 slides</option>
 							<option value = "15">15 slides</option>
@@ -53,7 +53,7 @@ class Setup extends React.Component
 					</div>
 					<div className = "submission">
 						<input type = "submit" value = "Get Started"/>
-					</div>
+					</div> 
 				</form>
 			</div>
 		)						
