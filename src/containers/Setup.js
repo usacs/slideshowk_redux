@@ -62,7 +62,7 @@ class Setup extends React.Component
 
 function mapStateToProps(state) {
 	return { 
-		slidenav: state.slidenav
+		slidenav: state.slidenav,
 	}
 }
 

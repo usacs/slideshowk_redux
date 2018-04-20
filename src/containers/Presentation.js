@@ -9,9 +9,9 @@ import Slide from '../components/Slide'
 
 class Presentation extends React.Component {
 	
-
 	componentDidMount() {
-	//	this.props.getSlides()
+
+		this.props.getImage(this.props.slidenav.current_slide.image)
 		this.handleKeyDown = this.handleKeyDown.bind(this)
 		window.addEventListener("keydown", this.handleKeyDown)
 	}
@@ -24,25 +24,30 @@ class Presentation extends React.Component {
 		if(e.key === 'ArrowRight') {
 			e.preventDefault()
 			this.props.nextSlide()
-			this.props.getImage('afsskafjfk')
+
+			this.props.getImage(this.props.slidenav.current_slide.image)
 		}
 
 
 		if(e.key === 'ArrowLeft') {
 			e.preventDefault()
 			this.props.prevSlide()
-			this.props.getImage('hello')
+
+
+			this.props.getImage(this.props.slidenav.current_slide.image)
 		}
 	}
 
+	
+
 	render() {
-		//console.log(this.props)
+
 		return (
 			<div>	
 					<Slide 
 						index = {this.props.slidenav.index}
-						imageurl = {this.props.slidemaker.imageurl}
-						text = {this.props.slidemaker.text}
+						image = {this.props.slidemaker.imageurl}
+						text = {this.props.slidenav.current_slide.text}
 						author = {this.props.slidemaker.author}
 					/>
 			</div>

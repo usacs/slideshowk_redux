@@ -3,8 +3,7 @@ import { GET_IMAGE } from '../actions/ActionTypes'
 
 const initialState = {
 	imageurl: '',
-	author: '',
-	text: ''
+	author: ''
 }
 
 const SlideMaker =  (state = initialState, action) => {
@@ -13,7 +12,6 @@ const SlideMaker =  (state = initialState, action) => {
 			return {
 				...state,
 				imageurl: action.url,
-				text: action.text,
 				author: action.author
 			}
 		default: 
