@@ -11,5 +11,6 @@ export const CLEAR = 'CLEAR'
 
 
 export const GET_IMAGE = 'GET_IMAGE'
+export const FIND_IMAGE = 'FIND_IMAGE'
 export const MAKE_SLIDES = 'MAKE_SLIDES'
 

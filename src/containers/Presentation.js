@@ -45,10 +45,7 @@ class Presentation extends React.Component {
 		return (
 			<div>	
 					<Slide 
-						index = {this.props.slidenav.index}
-						image = {this.props.slidemaker.imageurl}
 						text = {this.props.slidenav.current_slide.text}
-						author = {this.props.slidemaker.author}
 					/>
 			</div>
 		)

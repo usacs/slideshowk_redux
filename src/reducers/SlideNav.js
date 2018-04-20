@@ -6,15 +6,16 @@ const initialState = {
 	current_slide: null,
 	start_query: '',
 	index: 0,			
-	max: 10,
+	max: 13,
 	ready: false
 }
 
 
 const SlideNav = (state = initialState, action) => {
+	//console.log(state)
 	switch(action.type) {
 		case NEXT_SLIDE:
-			if(state.index + 1 >= state.max) {
+			if(state.index >= state.max - 1) {
 				return {
 					...state,
 					index: state.max - 1,
@@ -45,7 +46,7 @@ const SlideNav = (state = initialState, action) => {
 			return {
 				...state, 
 				index: 0,
-				max: action.max
+				max: action.max  //bonus slides
 			}
 		case SET_START_QUERY:
 			return {

@@ -16,9 +16,10 @@ export const prevSlide = () => {
 }
 
 const setMaxCount = (num) => {
+	//account for extra slides
 	return {
 		type: SET_MAX_COUNT,
-		max: num
+		max: parseInt(num) + 3
 	}
 }
 
@@ -44,7 +45,7 @@ const makeSlides = (query, num) => {
 		
 		//console.log('q ' + q)
 	
-	for(let i = 1; i < num; i++) {
+	for(let i = 0; i < num; i++) {
 		slides.push({
 			text: t, 
 			image: q
@@ -53,6 +54,19 @@ const makeSlides = (query, num) => {
 		//console.log(t)
 		q = getNextImage(q)
 	}
+		slides.push({
+			text: 'Wrapping Up',
+			image: q
+		})
+		 
+		 t = 'Thank You.'
+		 q = 'Thank You ' + q
+		
+		slides.push({
+			text: t,
+			image: q
+		})
+
 	return {
 		type: MAKE_SLIDES, 
 		slides: slides
