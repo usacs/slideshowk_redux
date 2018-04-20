@@ -2541,7 +2541,7 @@ export const stext = [
 	"mint",
 	"minute",
 	"mirror",
-	"miscarriage",
+	"misbehavior",
 	"miscommunication",
 	"misfit",
 	"misogyny",

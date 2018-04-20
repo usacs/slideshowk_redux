@@ -22,6 +22,7 @@ export const ptext = [
 	"Disrupt, Disrupt, Disrupt",
 	"A GAME CHANGER",
 	"Picture this.",
+	"We'll Be\nRight Back",
 	"This is not good.",
 	"Over 30%",
 	"Back to the drawing board...",

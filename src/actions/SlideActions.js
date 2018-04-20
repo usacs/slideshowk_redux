@@ -34,7 +34,7 @@ const makeSlides = (query, num) => {
 	let slides = []
 
 	slides.push({
-		text: query + ':\nA Presentation',
+		text: query + ':\nA Pitch Deck',
 		image: query
 	})
 
@@ -46,16 +46,19 @@ const makeSlides = (query, num) => {
 		//console.log('q ' + q)
 	
 	for(let i = 0; i < num; i++) {
+		
 		slides.push({
 			text: t, 
 			image: q
 		})
-		t = getNextText(t)
-		//console.log(t)
-		q = getNextImage(q)
+
+		console.log('ot ' + t + '\noq ' + q)
+		setTimeout(t = getNextText(t), 300)
+		setTimeout(q = getNextImage(q), 300)
+		console.log('t ' + t + '\nq ' + q)
 	}
 		slides.push({
-			text: 'Wrapping Up',
+			text: 'Final Conclusions.',
 			image: q
 		})
 		 

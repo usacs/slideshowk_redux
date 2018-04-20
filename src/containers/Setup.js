@@ -38,7 +38,7 @@ class Setup extends React.Component
 	{
 		
 		return(
-			<div>
+			<div className = "setupForm">
 				<h2> Get Started </h2>
 				<form name="setupForm" onSubmit={this.onSubmit}>
 					<div className = "text">

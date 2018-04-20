@@ -21,7 +21,7 @@ class Slide extends React.Component
 					<div className = "SlideContainer">
 							<img src = {this.props.slidemaker.imageurl} alt = "image goes here"/>
 						<div className = "SlideText">
-							{ textsrc }			
+							<mark>{ textsrc }</mark>			
 						</div>
 					</div>
 					{this.props.slidemaker.author}
