@@ -6,7 +6,9 @@ class Slide extends React.Component
 {
 	
     
-	
+	componentWillMount() {
+		
+	}
 	
     render()
     {
@@ -14,8 +16,8 @@ class Slide extends React.Component
 		
         return(
 				<div>
-					<div className = "SlideContainer fade">
-						<img src = {this.props.image} alt = "image goes here"/>
+					<div className = "SlideContainer">
+						<img className = "fade" src = {this.props.image} alt = "image goes here"/>
 						<div className = "SlideText">
 							{this.props.text}			
 						</div>

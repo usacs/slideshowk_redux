@@ -33,7 +33,7 @@ const makeSlides = (query, num) => {
 	let slides = []
 
 	slides.push({
-		text: query + ':&#13;&#10;A Presentation',
+		text: query + ':\nA Presentation',
 		image: query
 	})
 

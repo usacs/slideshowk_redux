@@ -7,7 +7,7 @@ export const getNextText = (query) => {
 	
 	let choose = Math.ceil((Math.random() + query.charCodeAt(0) / 1000) * 100) 
 	//console.log(choose)
-	if(choose > 67) {
+	if(choose > 55) {
 		return getText(query, ptext)
 	}
 	return getText(query, stext)

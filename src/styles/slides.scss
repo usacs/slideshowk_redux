@@ -32,7 +32,7 @@ $title_color: $ghostwhite;
 	}
 
 	//text
-	>text
+	.SlideText
 	{
 		width: 100%;
 		height: 50%;
@@ -57,4 +57,27 @@ $title_color: $ghostwhite;
 			
 		border: dashed black;
 	}
+
+}
+
+
+/* Fading animation */
+.fade 
+{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade 
+{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade 
+{
+  from {opacity: .4}
+  to {opacity: 1}
 }
