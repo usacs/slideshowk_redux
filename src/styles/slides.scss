@@ -3,7 +3,7 @@
 @import "master";
 
 //Font Variables
-$title_font: 'Oswald', sans-serif;
+$title_font: 'Archivo Black', sans-serif;
 
 //Color Variables
 $title_color: $ghostwhite;
@@ -16,8 +16,8 @@ $title_color: $ghostwhite;
 	width: 80vw;
 	height: 80vh;
 	margin: auto;
-
-	border: dashed red;
+	
+	//border: dashed red;
 
 	//img
 	>img
@@ -27,8 +27,8 @@ $title_color: $ghostwhite;
 		width: 100%;
 		height: 100%;
 		margin: auto;
-
-		border: dashed blue;
+		border-radius: 20px;
+		//border: dashed blue;
 	}
 
 	//text
@@ -40,22 +40,21 @@ $title_color: $ghostwhite;
 		position: absolute;
 		text-align: center;
 		white-space: pre-line;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		margin: auto;
+		//top: 50%;
+		//left: 50%;
+		//transform: translate(-50%, -50%);
 
 		font-family: $title_font;
-		font-size: 9rem;
+		font-size: 7rem;
+		font-weight: bold;
 		letter-spacing: 0;
 		color: $title_color;
 		//outline
-		text-shadow:
-			-3px -3px 0 #000,
-			3px -3px 0 #000,
-			-3px 3px 0 #000,
-			3px 3px 0 #000;
-			
-		border: dashed black;
+	
+		-webkit-text-stroke-width: 3px;
+		-webkit-text-stroke-color: #000;
+		//border: dashed black;
 	}
 
 

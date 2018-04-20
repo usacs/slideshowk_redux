@@ -19,7 +19,7 @@ export const getNextText = (query) => {
 	//random tech stack
 		shuffle(ttext)
 		shuffle(stext)
-		return getText(query, ttext) + '\n' + getText(query, stext)
+		return getText(query, ttext) + ' ' + getText(query, stext)
 	} else {
 		shuffle(stext)
 		return getText(query, stext)

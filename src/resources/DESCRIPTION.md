@@ -1,5 +1,5 @@
 # Slideshow Karaoke Redux
-## by Ez Ablaza
+### by TresTres
 
 
 # Goal:

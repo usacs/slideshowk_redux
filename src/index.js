@@ -28,7 +28,7 @@ const App = () => (
 			<Router>
 				<div>
 					<div className = "pagetitle">
-						<h1> Slideshow Karaoke </h1>
+						<h1>Slideshow Karaoke</h1>
 					</div>
 					<ul className = "header">
 						<li>
@@ -40,6 +40,10 @@ const App = () => (
 								Get Started
 							</Link></li>
 					</ul>
+					<div className = "content">
+					</div>
+					<div className = "footer">
+					</div>
 
 					
 					<Route path = "/HowToPlay" component={HowToPlay} />

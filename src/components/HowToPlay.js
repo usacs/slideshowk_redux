@@ -27,10 +27,13 @@ class HowToPlay extends React.Component {
 			md = this.state.md
 		}
 
+
 		return(
 			<div className = "description">
-				<h2> WELCOME </h2>
-				<ReactMarkdown source = {md} />
+				<h2>HOW TO PLAY:</h2>
+				<div className = "body">
+					<ReactMarkdown source = {md} />
+				</div>
 			</div>
 		);
 	}

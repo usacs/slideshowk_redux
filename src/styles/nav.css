@@ -1,17 +1,57 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous");
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 :root {
   background-color: #5F6A72;
-  padding: 1em; }
+  padding: 1em;
+  margin: auto; }
 
-.pagetitle h1 {
-  color: #F8F8FF;
-  text-align: center;
-  font-size: 90px;
-  font-family: "Righteous", cursive;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+.pagetitle {
+  display: block;
+  position: relative;
+  margin: auto;
+  text-align: center; }
+  .pagetitle > h1 {
+    color: #F8F8FF;
+    font-size: 90px;
+    font-family: "Righteous", cursive;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+
+.description {
+  display: block;
+  position: relative;
+  width: 80vw;
+  margin: auto;
+  background-color: #F8F8FF;
+  border-radius: 20px;
+  box-shadow: #000 5px 10px 20px -3px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: black; }
+  .description > h2 {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1em;
+    background-color: #495259;
+    color: transparent;
+    text-shadow: 0px 10px 10px rgba(255, 255, 255, 0.2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text; }
+  .description .body {
+    position: relative;
+    margin: auto;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-bottom: 30px;
+    font-size: 1.5em; }
 
 ul.header {
+  font-family: "Righteous", cursive;
+  letter-spacing: 2px;
   background-color: #CC0033;
   padding: 0; }
   ul.header li {
@@ -25,13 +65,6 @@ ul.header {
       display: inline-block; }
     ul.header li .selected {
       background-color: #FFB6C1; }
-
-.content {
-  padding: 20px; }
-  .content h2 {
-    text-align: center;
-    font-family: "Righteous", cursive;
-    font-size: 40px; }
 
 .dropdown {
   position: absolute;
