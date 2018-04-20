@@ -11,7 +11,7 @@ const all = ttext.concat(stext).concat(ptext)
 export const getNextText = (query) => {
 	
 	let choose = Math.ceil(Math.random() * 100) 
-	console.log(choose)
+	//console.log(choose)
 	if(choose >= 67) {
 		shuffle(ptext)
 		return getText(query, ptext)
@@ -56,7 +56,7 @@ const getHash = (word, bins) => {
 	let ssum = 0
 	for(let i = 0; i < word.length; i++) {
 		gsum+=Math.round(word.charCodeAt(i) * Math.pow(199, Math.random() * i))
-		ssum+=Math.random() * word.charCodeAt(i)
+		ssum+=Math.round(Math.random() * word.charCodeAt(i))
 	}	
 
 	let val = Math.round(Math.random() * (gsum % bins + ssum * Math.random()))

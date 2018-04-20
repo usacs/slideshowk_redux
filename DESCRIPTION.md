@@ -1,9 +1,9 @@
-# Slideshowk Project Description
+# Slideshow Karaoke Redux
 ## by Ez Ablaza
 
 
 # Goal:
-To recreate the public speaking game "slideshow karaoke", which is widely popular at hackathons and other events. 
+To recreate the public speaking game "slideshow karaoke" or "battle decks", a widely popular game at hackathons, icebreakers, and other events. 
 
 # How to Play:
 There are two roles:
@@ -15,7 +15,12 @@ There are two roles:
 	+ Your goal is to throw off the presenter(s).  You don't have a lot of ways to do this.  The first is by topic choice - come up with a 
 	random, but simple topic to seed the slide generator.  The second is by speed - you control the tempo.  Mix up long awkward pauses and quick slide
 	changes to throw off your presenter's rhythm.
-Everyone's role is to have fun and have a lot of laughs - trust me, the larger the crowd, the funnier this gets.  Keep it clean.  Think on the fly.  
+_Everyone_'s role is to have fun and have a lot of laughs - trust me, the larger the crowd, the funnier this gets.  Keep it clean.  Think on the fly.  
 
-# Landing
-Upon starting the site, the user will have the option of selecting the "How to Play" tab or the "Start" tab.  
+# Directions:
+Simply click Start, enter a Presentation "topic", select the number of slides, and Submit!  You may use arrow keys to navigate.  Playing full-screen
+with a projector is highly recommended.
+
+# Acknowledgements:
+Many thanks to Pexels and Giphy for allowing this project to be made possible through the use of their APIs. 
+

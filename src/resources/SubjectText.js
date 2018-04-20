@@ -789,7 +789,7 @@ export const stext = [
 	"clavier",
 	"cleaner",
 	"cleat",
-	"cleavage",
+	"cleaver",
 	"clef",
 	"cleric",
 	"clerk",

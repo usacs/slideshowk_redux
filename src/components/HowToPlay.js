@@ -1,20 +1,39 @@
 //HowToPlay.js
 
-import React, { Component } from "react";
+import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
-class HowToPlay extends Component 
-{
-	render() 
-	{
+
+class HowToPlay extends React.Component {
+	
+	componentWillMount() {
+ 		const readmePath = require("../resources/DESCRIPTION.md")
+
+  		fetch(readmePath)
+    		.then(response => {
+      			return response.text()
+    		})
+    		.then(text => {
+      			this.setState({
+        		md:  text
+      		})
+    	})
+	}
+	
+	render() {
+		let md = "#Loading..."
+		let s = this.state
+		if(s != null) {
+			md = this.state.md
+		}
+
 		return(
-			<div>
+			<div className = "description">
 				<h2> WELCOME </h2>
-				<p>How to play: blah blah blah</p>
-
-				<p>In order to blah blah blah, blah blah blah</p>
+				<ReactMarkdown source = {md} />
 			</div>
 		);
 	}
 }
 
-export default HowToPlay;
+export default HowToPlay

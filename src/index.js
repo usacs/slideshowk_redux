@@ -4,7 +4,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import reduxThunk from 'redux-thunk'
 import { withRouter } from 'react-router'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect, Link } from 'react-router-dom'
 import rootReducer from './reducers/rootReducer'
 import HowToPlay from './components/HowToPlay'
 import Start from './components/Start'
@@ -27,7 +27,9 @@ const App = () => (
 		<Provider store={store}>
 			<Router>
 				<div>
-					<h1> Welcome </h1>
+					<div className = "pagetitle">
+						<h1> Slideshow Karaoke </h1>
+					</div>
 					<ul className = "header">
 						<li>
 							<Link to = "/HowToPlay">
@@ -39,9 +41,10 @@ const App = () => (
 							</Link></li>
 					</ul>
 
-					<hr />
+					
 					<Route path = "/HowToPlay" component={HowToPlay} />
 					<Route path = "/Start" component={Start} />
+					<Route path = "/" render={() => <Redirect to="/HowToPlay" />} />
 				</div>
 			</Router>
 		</Provider>

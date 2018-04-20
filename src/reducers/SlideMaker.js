@@ -2,8 +2,8 @@
 import { GET_IMAGE, FIND_IMAGE } from '../actions/ActionTypes' 
 
 const initialState = {
-	imageurl: 'https://vignette.wikia.nocookie.net/joke-battles/images/5/5a/Black.jpg/revision/latest?cb=20161223050425',
-	author: '...',
+	imageurl: 'https://media.giphy.com/media/bbr1n5lZGTpYc/giphy.gif',
+	author: 'https://www.reddit.com/r/loadingicon/comments/3teuj5/spinning_rainbow_circles/',
 	finished: false
 }
 
