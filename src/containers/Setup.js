@@ -49,7 +49,7 @@ class Setup extends React.Component
 
 	render()
 	{
-		this.styleDropdown()
+		
 
 		return(
 			
@@ -68,7 +68,7 @@ class Setup extends React.Component
 						</select>
 					</div>
 					<div className = "submission">
-						<input type = "submit" value = "Get Started"/>
+						<button type = "submit" value = "Get Started">Start the Show</button>
 					</div> 
 				</form>
 			</div>
