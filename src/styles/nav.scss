@@ -157,9 +157,31 @@ $md_font: 'Roboto Condensed', sans-serif;
 		outline: none;
 		background: $background_dark;
 	}
+		
+	select 
+	{
+		background:$background_color;
+		
+		box-shadow: #000 5px 10px 10px -7px inset;
+		outline: none;
+	  	margin: 50px;
 
-
+	  	width: 300px;
+	 	padding: 5px 35px 5px 5px;
+	 	font-family: $md_font;
+	  	font-size: 40px;
+		color: $ghostwhite;
+	  	border: 1px solid #ccc;
+	  	height: 70px;
+	  	-webkit-appearance: none;
+	  	-moz-appearance: none;
+	  	appearance: none;
+	  	//background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
+	}
+	
 }
+
+
 
 ul.header
 {

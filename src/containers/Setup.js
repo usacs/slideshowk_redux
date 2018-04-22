@@ -31,22 +31,38 @@ class Setup extends React.Component
 		return true
 	}
 
+	styleDropdown = () => {
+	
+		var customSelects = document.querySelectorAll(".dropdown_set");
+		for(var i=0; i<customSelects.length; i++) {
+			if (customSelects[i].hasAttribute("disabled")) {
+					console.log('styling')
+					customSelects[i].parentNode.className += " dropdown_disabled";
+			}
+		}	
+		
+	
+	}
+
 
 
 
 	render()
 	{
-		
+		this.styleDropdown()
+
 		return(
+			
 			<div className = "setupForm">
 				<h2> Get Started </h2>
 				<form name="setupForm" onSubmit={this.onSubmit}>
 					<div className = "text">
-						<input type = "text" name="query" placeholder="Enter a &quot;Topic&quot;" onChange={this.onTextChange}/>
+						<input type = "text" name="query" placeholder="Enter a &quot;Topic&quot;"/>
 					</div>
-					<div className = "selection">
-						<select name = "slidecount" onChange={this.onNumChange}>
-							<option value="10">10 slides</option>
+					<div className = "select">
+						<span className ="dropdown dropdown_set"/>
+						<select className = "dropdown_select dropdown_select_set" name = "slidecount">
+							<option value="10">10 Slides</option>
 							<option value = "15">15 slides</option>
 							<option value = "20">20 slides</option>
 						</select>

@@ -98,6 +98,21 @@
     color: #F8F8FF;
     outline: none;
     background: #495259; }
+  .setupForm select {
+    background: #5F6A72;
+    box-shadow: #000 5px 10px 10px -7px inset;
+    outline: none;
+    margin: 50px;
+    width: 300px;
+    padding: 5px 35px 5px 5px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    color: #F8F8FF;
+    border: 1px solid #ccc;
+    height: 70px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
 
 ul.header {
   font-family: "Righteous", cursive;
